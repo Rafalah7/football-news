@@ -17,13 +17,14 @@ def show_main(request):
 
     if filter_type == "all":
         news_list = News.objects.all()
+
     else:
         news_list = News.objects.filter(user=request.user)
 
     context = {
-        'npm': '240123456',
+        'npm': '2406417790',
         'name': request.user.username,
-        'class': 'PBP A',
+        'class': 'PBP B',
         'news_list': news_list,
         'last_login': request.COOKIES.get('last_login', 'Never')
     }
